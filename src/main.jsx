@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import MainLayout from './layout/MainLayout'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
-import {BlogDetails, Home, ReactQuery , GithubUsers} from "./pages"
+import {BlogDetails, Home, ReactQuery , GithubUsers, Blog} from "./pages"
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { lazy } from 'react'
@@ -11,7 +11,9 @@ import Loading from './components/Loading'
 import Players from './pages/Players'
 import OwnDetails from './pages/OwnDetails'
 import Form from './pages/Form'
+// import WpblogDetails from './pages/WpblogDetails'
 const Data = lazy(()=>import("./pages/Data"))
+const WpblogDetails = lazy(()=> import("./pages/WpblogDetails"))
 
 
 
@@ -26,6 +28,8 @@ const router = createBrowserRouter(
       <Route path='/players' element={<Players/>} />
       <Route path='/playes/our-own-posts' element={<OwnDetails/>} />
       <Route path='/update' element={<Form/>} />
+      <Route path='/wp-blogs' element={<Blog/>} />
+      <Route path={`/wp-posts/:slug`} element={<WpblogDetails/>} />
     </Route>   
   )
 )

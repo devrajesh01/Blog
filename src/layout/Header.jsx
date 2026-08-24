@@ -12,6 +12,7 @@ const Header = () => {
         <li><NavLink to={"/users"} > Users</NavLink></li>
         <li><NavLink to={"/data"} > Data</NavLink></li>
         <li><NavLink to={"/players"} > Players</NavLink></li>
+        <li><NavLink to={"/wp-blogs"} > WpBlogs</NavLink></li>
       </ul>
     </nav>
    </header>

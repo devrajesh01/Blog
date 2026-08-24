@@ -6,9 +6,7 @@ import {
     updateUserData,
 } from "../api/usersApi";
 import { Link } from "react-router-dom";
-
 const FormOpen = lazy(() => import("../popups/Dialogue"));
-
 const Players = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedUser, setSelectedUser] = useState(null);
@@ -18,7 +16,6 @@ const Players = () => {
         queryKey: ["postUsers"],
         queryFn: getUsersData,
     });
-
     const deleteMutation = useMutation({
         mutationFn: (id) => deleteUserData(id),
         onSuccess: (_, id) => {
@@ -27,7 +24,6 @@ const Players = () => {
             });
         },
     });
-
     const updateMutation = useMutation({
         mutationFn: updateUserData,
         onSuccess: (updatedPost) => {
