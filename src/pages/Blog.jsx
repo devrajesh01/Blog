@@ -7,7 +7,6 @@ export const Blog = () => {
     const {
         data,
         error,
-
         isError,
         isPending,
     } = useQuery({

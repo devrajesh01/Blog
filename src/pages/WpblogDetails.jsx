@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom'
 const WpblogDetails = () => {
   const location = useLocation();
   const blog = location.state.post
-
   return (
     <div className='text-white' >
       <h1>WpblogDetails {blog.title.rendered}</h1>
@@ -16,5 +15,4 @@ const WpblogDetails = () => {
     </div>
   )
 }
-
 export default WpblogDetails

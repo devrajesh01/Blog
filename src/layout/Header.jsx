@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink , Link } from 'react-router-dom'
-
 const Header = () => {
   return (
    <header className='w-full px-6 py-4 bg-gray-600 text-white flex justify-between items-center' >
@@ -18,5 +17,4 @@ const Header = () => {
    </header>
   )
 }
-
 export default Header
